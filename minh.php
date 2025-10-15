@@ -1,77 +1,49 @@
-<?php 
-echo "Hello World!";
-$name = "Minh";
-$age = "20";
-$city = "Ha Loi";
-$School ='Aptech';
-echo "My name is $name and I am $age years old i live in $city and i study at $School <br>" ;
-echo "";
-
-
-$a = 15;
-$b = 16;
-$sum = $a + $b;
-$diff = $a - $b;
-$prod = $a * $b;
-$quot = $a / $b;
-$mod = $a % $b;
-echo "Sum: $sum ,<br>  Difference: $diff ,<br> Product: $prod,<br> Quotient: $quot,<br> Modulus: $mod <br>";
-
-
-
-$sales = 1000;
-$commission = 0;
-$salary = 0;
-if($sales >1000){
-    $commission = $sales * 0.1;
-
-}else{
-    $salary = $sales * 0.05;
-}
-echo "Commission: $commission <br>";
-echo "Salary: $salary <br>";
-
-
-
-$score = 85;
-if($score >= 90){
-    echo "Excellent";
-}elseif($score >= 80){
-    echo "Good";
-}elseif($score >= 70){
-    echo "Average";
-}else{
-    echo "Fail";
+<?php
+$number = 1;
+while ($number <= 20) {
+    if ($number % 2 == 0) {
+        echo "$number<br>";
+    }
+    $number++;
 }
 
-echo "<br>";
-$day = 3;
-switch($day){
-    case 1:
-        echo "Monday";
+echo"--------------------------------<br>";
+for( $i=3;$i<=30;$i++){
+    if($i%3==0){
+        echo "$i<br>";
+    }
+}
+echo"--------------------------------<br>";
+$count = 1 ;
+do{
+    echo"PHP is fun!<br>";
+    $count++;
+}while($count <= 5);
+
+echo"--------------------------------<br>";
+$minh = 0;
+while($minh <= 10){
+    $minh = $minh + 1;
+    if($minh == 5){
+        continue;
+    }elseif($minh == 8){
         break;
-    case 2:
-        echo "Tuesday";
-        break;
-    case 3:
-        echo "Wednesday";
-        break;
-    case 4:
-        echo "Thursday";
-        break;
-    case 5:
-        echo "Friday";
-        break;
-    case 6:
-        echo "Saturday";
-        break;
-    case 7:
-        echo "Sunday";
-        break;
-    default:
-        echo "Invalid day";
+    }
+    echo "$minh<br>";
+}
+echo "LOOP END<br>";
+echo"--------------------------------<br>";
+
+function calculateArea($radius){
+    $area = 3.14 * $radius * $radius;
+    echo"ban kinh $radius co dien tich la $area<br>";
 }
 
+calculateArea(3);
+calculateArea(5);
+calculateArea(7);
 
+
+?>
 
 
